@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: demo
+    container_name: demo
+    ports:
+      - "8080:8080"
+    networks:
+      - demo-network
+
+  mongodb:
+    image: mongo:latest
+    hostname: "mongodb"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: demo
+    ports:
+      - 27017:27017
+    networks:
+      - demo-network
+
+networks:
+  demo-network:
+    driver: bridge

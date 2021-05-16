@@ -14,13 +14,13 @@ uses Docker as its platform.
 
 ## How to run it
 
-1. Build the app
+1. Build it
 ```shell
-$ docker compose build --no-cache java-springboot-reactive
+$ docker compose build
 ```
-2. Run docker compose
+2. Run it
 ```shell
-$ docker compose up -d
+$ docker compose up
 ```
 
 3. Hit Spring's actuator to see if everything is live.
