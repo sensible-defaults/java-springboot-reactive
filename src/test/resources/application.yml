@@ -2,10 +2,3 @@ logging:
   level:
     root: INFO
     org.springframework.web: INFO
-
-spring:
-  data:
-    mongodb:
-      port: 27017
-      host: localhost
-      authentication-database: admin
